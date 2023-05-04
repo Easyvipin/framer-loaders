@@ -7,8 +7,7 @@ export default function Home() {
   return (
     <main className="h-screen flex flex-col items-center p-8 gap-10">
       <Header />
-      <Loader />
-      {/*  <div className="flex flex-wrap gap-8">
+      <div className="flex flex-wrap gap-8">
         <div className="border border-rose-300 h-80 w-80 rounded-lg shadow-violet-500 shadow-md hover:shadow-violet-700">
           <Bar />
         </div>
@@ -18,7 +17,7 @@ export default function Home() {
         <div className="border border-rose-300 h-80 w-80 rounded-lg shadow-violet-500 shadow-md hover:shadow-violet-700">
           loader
         </div>
-      </div> */}
+      </div>
     </main>
   );
 }

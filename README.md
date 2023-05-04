@@ -8,3 +8,5 @@ Loader built in jsx with framer-motion , ready to use.
 - Bars
 - Rockets
 - Settings
+
+### ANIMATING SVG ICONS
