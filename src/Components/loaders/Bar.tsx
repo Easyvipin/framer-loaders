@@ -32,67 +32,78 @@ const pathVariants = {
 
 const Bar: React.FC<IBarProps> = (props) => {
   return (
-    <div className="w-full h-1/2 border flex flex-col justify-center items-center">
+    <div className="w-full h-1/2 border flex flex-col justify-center items-center text-white">
       <svg
-        fill="#fff"
-        height="70px"
-        width="70px"
-        version="1.1"
+        version="1.0"
         id="Layer_1"
         xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 490.667 490.667"
+        width="800px"
+        height="800px"
+        viewBox="0 0 64 64"
+        enable-background="new 0 0 64 64"
       >
         <g>
-          <g>
-            <motion.path
-              initial={{
-                opacity: 0,
-                pathLength: 0,
-              }}
-              animate={{
-                opacity: 1,
-                pathLength: 1,
-                transition: {
-                  duration: 2,
-                  ease: "easeInOut",
-                },
-              }}
-              d="M480,0H10.667C4.779,0,0,4.779,0,10.667V480c0,5.888,4.779,10.667,10.667,10.667H480c5.888,0,10.667-4.779,10.667-10.667
-			V10.667C490.667,4.779,485.888,0,480,0z M21.333,21.333h124.395C90.475,46.016,46.016,90.475,21.333,145.728V21.333z
-			 M227.115,22.251L50.624,355.648c-18.56-32.597-29.291-70.187-29.291-110.315C21.333,127.957,112.107,31.573,227.115,22.251z
-			 M245.333,33.472l174.272,329.195H71.061L245.333,33.472z M21.333,469.333V344.939c24.683,55.275,69.141,99.733,124.395,124.395
-			H21.333z M69.739,384h351.189c-41.067,51.883-104.427,85.333-175.595,85.333C174.187,469.333,110.805,435.883,69.739,384z
-			 M469.333,469.333H344.939c55.275-24.683,99.733-69.141,124.395-124.395V469.333z M440.043,355.648L263.552,22.251
-			c115.008,9.323,205.781,105.707,205.781,223.083C469.333,285.461,458.603,323.051,440.043,355.648z M469.333,145.728
-			c-24.683-55.253-69.141-99.712-124.395-124.395h124.395V145.728z"
-            />
-          </g>
+          <motion.path
+            fill="none"
+            stroke="blue"
+            initial={{
+              pathLength: 0,
+            }}
+            animate={{
+              pathLength: 1,
+              transition: {
+                duration: 6,
+                ease: "easeInOut",
+              },
+            }}
+            d="M63.934,31.645c-0.015-0.037-0.256-0.646-0.74-1.648C60.597,24.627,51.02,8.004,32,8.004
+		c-22.568,0-31.842,23.404-31.934,23.641c-0.089,0.231-0.089,0.487,0,0.719C0.158,32.6,9.432,56.004,32,56.004
+		c19.01,0,28.587-16.605,31.189-21.983c0.486-1.007,0.729-1.62,0.744-1.657C64.022,32.132,64.022,31.876,63.934,31.645z M32,54.004
+		c-19.686,0-28.677-19.123-29.917-22.001C3.321,29.121,12.288,10.004,32,10.004c19.686,0,28.677,19.123,29.917,22.001
+		C60.679,34.887,51.712,54.004,32,54.004z"
+          />
+          <motion.path
+            initial={{
+              pathLength: 0,
+              opacity: 0,
+            }}
+            animate={{
+              opacity: 1,
+              pathLength: 1,
+              transition: {
+                duration: 2,
+                ease: "easeInOut",
+              },
+            }}
+            fill="#16a34a"
+            stroke="yellow"
+            d="M32,16.008c-8.837,0-16,7.163-16,16s7.163,16,16,16s16-7.163,16-16S40.837,16.008,32,16.008z M32,46.008"
+          />
+          <motion.path
+            fill="#231F20"
+            d="M32,24.008c-4.418,0-8,3.582-8,8s3.582,8,8,8s8-3.582,8-8S36.418,24.008,32,24.008z M32,38.008
+		c-3.313,0-6-2.687-6-6s2.687-6,6-6s6,2.687,6,6S35.313,38.008,32,38.008z"
+          />
+          <motion.path
+            fill="#fff"
+            stroke="blue"
+            initial={{
+              pathLength: 0,
+              opacity: 0,
+            }}
+            animate={{
+              opacity: 1,
+              pathLength: 1,
+              transition: {
+                duration: 2,
+                ease: "easeInOut",
+              },
+            }}
+            d="M32,28.004c-0.553,0-1,0.447-1,1s0.447,1,1,1c1.104,0,2,0.896,2,2c0,0.553,0.447,1,1,1s1-0.447,1-1
+		C36,29.795,34.209,28.004,32,28.004z"
+          />
         </g>
       </svg>
-
-      <motion.svg
-        className="pizza-svg"
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 100 100"
-        variants={svgVariants}
-        initial="rotating"
-        animate="rest"
-      >
-        <motion.path
-          variants={pathVariants}
-          initial="hidden"
-          animate="visible"
-          fill="none"
-          d="M40 40 L80 40 C80 40 80 80 40 80 C40 80 0 80 0 40 C0 40 0 0 40 0Z"
-        />
-        <motion.path
-          variants={pathVariants}
-          initial="hidden"
-          animate="visible"
-          fill="none"
-          d="M50 30 L50 -10 C50 -10 90 -10 90 30 Z"
-        />
-      </motion.svg>
     </div>
   );
 };
