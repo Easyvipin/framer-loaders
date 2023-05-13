@@ -1,18 +1,17 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-interface IBarProps {}
+interface ICartProps {}
 
 const svgVariants = {
   rotating: {
-    rotate: -180,
+    stroke: "red",
   },
   rest: {
-    rotate: 0,
     transition: {
-      duration: 1,
       repeat: Infinity,
-      repeatType: "mirror",
+      duration: 0.2,
+      ease: "easeIn",
     },
   },
 };
@@ -32,7 +31,7 @@ const pathVariants = {
   },
 };
 
-const Bar: React.FC<IBarProps> = (props) => {
+const Cart: React.FC<ICartProps> = (props) => {
   return (
     <div className="w-full flex flex-col justify-center items-center  text-white">
       <div className="grow">
@@ -46,15 +45,24 @@ const Bar: React.FC<IBarProps> = (props) => {
           initial="rotating"
           animate="rest"
         >
-          <motion.path
-            fill="#fff"
-            d="M32,22A10,10,0,1,0,42,32,10,10,0,0,0,32,22Zm0,16a6,6,0,1,1,6-6A6,6,0,0,1,32,38Z"
-          />
           <path
             fill="#fff"
-            d="M57.85,28,47.78,11.65A7.69,7.69,0,0,0,41.22,8H22.78a7.69,7.69,0,0,0-6.56,3.65L6.15,28a7.68,7.68,0,0,0,0,8.1l10.07,16.3A7.69,7.69,0,0,0,22.78,56H41.22a7.69,7.69,0,0,0,6.56-3.65l10.07-16.3A7.68,7.68,0,0,0,57.85,28Zm-3.4,6L44.37,50.24A3.67,3.67,0,0,1,41.22,52H22.78a3.67,3.67,0,0,1-3.15-1.76L9.55,34a3.7,3.7,0,0,1,0-3.9L19.63,13.76A3.67,3.67,0,0,1,22.78,12H41.22a3.67,3.67,0,0,1,3.15,1.76L54.45,30.05A3.7,3.7,0,0,1,54.45,34Z"
+            d="M13,38H53a2,2,0,0,0,1.93-1.47l6-22A2,2,0,0,0,59,12H12.75L12,7.65A2,2,0,0,0,10,6H5a2,2,0,0,0,0,4H8.33l4.28,24A7,7,0,0,0,13,48h1.68a7,7,0,1,0,12.64,0H37.68a7,7,0,1,0,12.64,0H56a2,2,0,0,0,0-4H13a3,3,0,0,1,0-6ZM56.38,16,51.47,34H16.67L13.46,16ZM24,51a3,3,0,1,1-3-3A3,3,0,0,1,24,51Zm23,0a3,3,0,1,1-3-3A3,3,0,0,1,47,51Z"
           />
         </motion.svg>
+        <svg
+          version="1.1"
+          xmlns="http://www.w3.org/2000/svg"
+          width="200px"
+          height="200px"
+          viewBox="0 0 290.658 290.658"
+        >
+          <g>
+            <g>
+              <rect fill="#fff" width="290.658" height="11.711" />
+            </g>
+          </g>
+        </svg>
       </div>
       <div className="grow-[2]">
         <button className="text-pink-500 p-2 rounded outline-none border-green-400 border-none font-bold first-letter: font-sans text-xs">
@@ -65,4 +73,4 @@ const Bar: React.FC<IBarProps> = (props) => {
   );
 };
 
-export default Bar;
+export default Cart;
