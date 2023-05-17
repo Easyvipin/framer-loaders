@@ -28,8 +28,8 @@ const Cart: React.FC<ICartProps> = (props) => {
     <div className="w-full flex flex-col justify-center items-center  text-white">
       <div className="grow">
         <motion.svg
-          width="250px"
-          height="250px"
+          width="100px"
+          height="100px"
           viewBox="0 0 64 64"
           id="icons"
           xmlns="http://www.w3.org/2000/svg"
@@ -44,7 +44,7 @@ const Cart: React.FC<ICartProps> = (props) => {
         </motion.svg>
       </div>
       <div className="grow-[2]">
-        <button className="text-pink-500 p-2 rounded outline-none border-green-400 border-none font-bold first-letter: font-sans text-xs">
+        <button className="text-pink-500 font-mono   rounded outline-none border-green-400 border-none font-bold first-letter: font-sans text-xs">
           DOWNLOAD
         </button>
       </div>
